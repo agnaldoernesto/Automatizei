@@ -112,4 +112,37 @@ document.addEventListener('DOMContentLoaded', () => {
             updateToggleIcon(newTheme);
         });
     }
+
+    // --- Botão de voltar ao topo (scroll-to-top) ---
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    // Mostra o botão quando o usuário rola para baixo além de 300px
+    function handleScroll() {
+        if (!scrollTopBtn) return;
+        const showAfter = 300;
+        if (window.scrollY > showAfter) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    }
+
+    // Ao clicar, faz scroll suave para o topo
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', (e) => {
+            // Respeita a preferência de redução de movimento
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                window.scrollTo(0, 0);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Ouve o evento de rolagem
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Executa uma verificação inicial
+    handleScroll();
 });
