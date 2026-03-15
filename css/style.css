@@ -5,30 +5,33 @@
 
 /* Variáveis de Cores (Paleta Grayscale - Tema Claro Padrão) */
 :root {
-    --bg-color: #f7f7f7;
+    --brand-blue: #3282c1;
+    --brand-green: #8cc63f;
+    --brand-dark: #4d4d4d;
+
+    --bg-color: #f4f7f9;
     --card-bg-color: #ffffff;
-    --primary-color: #333333;
-    --secondary-color: #000000;
-    --text-color-light: #5a5858;
-    --border-color: #e0e0e0;
-    --accent-color: #2a2a2a;
-    --link-hover-color: #000000;
+    --primary-color: var(--brand-blue);
+    --secondary-color: var(--brand-dark);
+    --text-color-light: #666666;
+    --border-color: #e0e6ed;
+    --accent-color: var(--brand-green);
+    --link-hover-color: #266496;
     --toggle-bg: #e0e0e0;
-    --toggle-text: #585858;
+    --toggle-text: #4d4d4d;
 }
 
-/* Variáveis de Cores para o Tema Escuro */
 body.dark-theme {
-    --bg-color: #121212; /* Fundo escuro */
-    --card-bg-color: #1e1e1e; /* Fundo dos cards */
-    --primary-color: #e0e0e0; /* Cinza claro para títulos */
-    --secondary-color: #ffffff; /* Branco para títulos principais */
-    --text-color-light: #8d8d8d; /* Cinza claro para texto */
-    --border-color: #333333; /* Bordas escuras */
-    --accent-color: #ff0000; /* vermelho para destaque, mantendo o estilo moderno */
-    --link-hover-color: #ff1e00;
-    --toggle-bg: #333333;
-    --toggle-text: #ffffff;
+    --bg-color: #0f172a;
+    --card-bg-color: #1e293b;
+    --primary-color: #60a5fa;
+    --secondary-color: #f8fafc;
+    --text-color-light: #94a3b8;
+    --border-color: #334155;
+    --accent-color: var(--brand-green);
+    --link-hover-color: #93c5fd;
+    --toggle-bg: #334155;
+    --toggle-text: #f8fafc;
 }
 
 /* Estilos de Transição para o Tema */
