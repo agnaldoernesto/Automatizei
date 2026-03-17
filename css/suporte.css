@@ -38,6 +38,11 @@
     color: var(--text-color-light);
 }
 
+.searchInput::placeholder {
+    color: var(--text-color-light);
+    font-size: 0.8rem;
+}
+
 .searchButton {
     padding: 15px 25px;
     border: 1px solid var(--primary-color);
