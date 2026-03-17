@@ -36,3 +36,9 @@ Since this is a static project, you only need a modern web browser.
     ```
 3.  **Launch:**
     Simply open `index.html` in your browser, or use a local server like Live Server (VS Code extension) for the best experience.
+
+## 🌍 Visit Site
+
+### Acess deployed site (preview)
+
+1. **just click here:** https://automatizei.agnaldoernesto99.workes.dev

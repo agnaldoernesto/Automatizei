@@ -1,8 +1,5 @@
-/* Importação de fontes: Georgia para títulos e corpo para um visual formal */
 @import url('https://fonts.googleapis.com/css2?family=Code:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
-
-/* Variáveis de Cores (Paleta Grayscale - Tema Claro Padrão) */
 :root {
     --brand-blue: #3282c1;
     --brand-green: #8cc63f;
@@ -33,7 +30,6 @@ body.dark-theme {
     --toggle-text: #f8fafc;
 }
 
-/* Estilos de Transição para o Tema */
 body,
 .header,
 .tool-card,
@@ -45,7 +41,6 @@ body,
     transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Reset e Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -69,7 +64,6 @@ body {
     padding: 0 40px;
 }
 
-/* Estilos do Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -78,7 +72,7 @@ body {
     padding: 10px 40px;
     background-color: var(--card-bg-color);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px #0000000d;
     opacity: 0.5;
     z-index: 1000;
 }
@@ -91,6 +85,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    width: 50%;
 }
 
 .logo img {
@@ -109,6 +104,12 @@ body {
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.main-nav {
+    width: 50%;
+    display: flex;
+    justify-content: end
 }
 
 .main-nav ul {
@@ -159,7 +160,6 @@ body {
 }
 
 
-/* Botão de voltar ao topo (scroll-to-top) */
 .scroll-top-button {
     position: fixed;
     right: 20px;
@@ -192,19 +192,48 @@ body {
     font-size: 1.05rem;
 }
 
-/* Ajustes para temas escuros */
 body.dark-theme .scroll-top-button {
     background-color: var(--primary-color);
     color: var(--toggle-text);
 }
 
-
-/* Estilos da Seção Hero (Página Inicial) */
 .hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 100px 0;
+}
+
+.search-bar-container-main {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.searchInputMain {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color-light);
+}
+
+.searchButtonMain {
+    padding: 15px 25px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--card-bg-color);
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+    background-color: var(--secondary-color);
 }
 
 .hero-text {
@@ -225,9 +254,10 @@ body.dark-theme .scroll-top-button {
 }
 
 .cta-button {
+    width: fit-content;
     display: inline-block;
-    padding: 15px 30px;
-    background-color: var(--accent-color);
+    padding: 10px 20px;
+    background-color: var(--primary-color);
     color: var(--card-bg-color);
     text-decoration: none;
     border-radius: 5px;
@@ -254,7 +284,6 @@ body.dark-theme .scroll-top-button {
     border-radius: 10px;
 }
 
-/* Estilos dos Cards de Ferramentas */
 .tools-section {
     padding: 80px 0;
     text-align: center;
@@ -308,7 +337,17 @@ body.dark-theme .scroll-top-button {
     font-size: 0.9em;
 }
 
-/* Estilos da Página About */
+.tool-task {
+    display: block;
+    font-size: 0.75em;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
 .about-section {
     display: flex;
     align-items: center;
@@ -341,7 +380,6 @@ body.dark-theme .scroll-top-button {
     margin-bottom: 20px;
 }
 
-/* Animação para o 'fade-in' com scroll */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -353,7 +391,51 @@ body.dark-theme .scroll-top-button {
     transform: translateY(0);
 }
 
-/* Estilos do Footer */
+.contact-section {
+
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--card-bg-color);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0000000d;
+    border: 1px solid var(--border-color);
+    margin-top: 40px;
+
+}
+
+.contact-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    display: inline-block;
+    margin: 15px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
 .footer {
     text-align: center;
     padding: 20px;
@@ -368,8 +450,6 @@ body.dark-theme .scroll-top-button {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
-
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
 
 /* Telas de tablet (tamanho máximo de 878px) */
 @media (max-width: 878px) {
@@ -406,6 +486,23 @@ body.dark-theme .scroll-top-button {
         flex-direction: column;
         text-align: center;
         padding: 60px 0;
+    }
+
+    .search-bar-container-main {
+        flex-direction: column;
+        margin: 40px 0;
+        align-items: center;
+    }
+
+    .searchInputMain {
+        border-radius: 50px;
+        margin-bottom: 10px;
+    }
+
+    .searchButtonMain {
+        border-radius: 50px;
+        width: 100%;
+        max-width: 200px;
     }
 
     .hero-text,
@@ -451,14 +548,22 @@ body.dark-theme .scroll-top-button {
     }
 }
 
-/* Telas de celular (tamanho máximo de 480px) */
-@media (max-width: 480px) {
+/* Telas de celular (tamanho máximo de 550px) */
+@media (max-width: 550px) {
     .header {
         align-items: center;
     }
 
+    .logo {
+        justify-content: center;
+    }
+
     .logo h1 {
         display: none;
+    }
+
+    .main-nav {
+        justify-content: center;
     }
 
     .main-nav ul {
@@ -511,4 +616,21 @@ body.dark-theme .scroll-top-button {
         max-width: 45%;
     }
 
+}
+
+/* Telas de celular menores (tamanho máximo de 380px) */
+
+@media (max-width: 380px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
 }
