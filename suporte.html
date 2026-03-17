@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-MZ">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Casa</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="suporte.html" class="active">Suporte</a></li>
             </ul>
@@ -32,20 +32,19 @@
     <main class="main-content">
         <section class="support-hero">
             <h2>SUPORTE E ASSISTÊNCIA</h2>
-            <p>Encontre as respostas para suas perguntas ou entre em contato com nossa equipe de suporte.</p>
+            <p>Encontre as respostas para as suas perguntas ou entre em contacto com a nossa equipa de suporte.</p>
             <div class="search-bar-container">
-                <input type="text" id="searchInput" placeholder="Pesquisar artigos, tópicos, etc...">
-                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <input type="text" class="searchInput" placeholder="Pesquisar artigos, tópicos, etc...">
+                <button class="searchButton"><i class="fas fa-search"></i></button>
             </div>
         </section>
 
         <section class="popular-topics">
             <h3>Tópicos Populares</h3>
             <div class="topics-grid">
-
                 <a href="mailto:agnaldoernesto99@gmail.com" class="topic-card">
                     <i class="fas fa-tools"></i>
-                    <span>Solução de Problemas</span>
+                    <span>Resolução de Problemas</span>
                 </a>
                 <a href="mailto:agnaldoernesto99@gmail.com" class="topic-card">
                     <i class="fas fa-lightbulb"></i>
@@ -54,7 +53,7 @@
             </div>
         </section>
 
-        <section class="faq-section">
+        <section class="faq-section" id="faq-section">
             <h3>Questões Frequentes</h3>
             <div class="faq-container">
                 <div class="faq-item">
@@ -63,51 +62,150 @@
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Você pode enviar suas sugestões diretamente para nosso e-mail de suporte. Por favor, inclua
+                        <p>Pode enviar as suas sugestões directamente para o nosso e-mail de suporte. Por favor, inclua
                             "Sugestão de Ferramenta" no assunto.</p>
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>As ferramentas listadas são realmente gratuitas?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, priorizamos ferramentas que oferecem planos gratuitos ou versões "freemium" funcionais.
+                            Algumas
+                            podem ter limites diários, mas são acessíveis sem custo inicial.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>O Automatizei armazena os meus dados ou ficheiros?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não. O Automatizei é um directório de links. Quando clica numa ferramenta, é redireccionado
+                            para o
+                            site oficial da mesma. Recomendamos ler a política de privacidade de cada IA que utilizar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Encontrei um link que não funciona, o que fazer?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Como a tecnologia muda rápido, alguns links podem ficar offline. Se encontrar um erro, por
+                            favor
+                            informe-nos via WhatsApp ou E-mail para corrigirmos imediatamente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Preciso criar conta para usar o Automatizei?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não é necessário criar conta nem fazer login para navegar no nosso directório. Pode começar a
+                            automatizar as suas tarefas agora mesmo.</p>
+                    </div>
+                </div>
+
                 <div class="faq-item">
                     <button class="faq-question">
                         <h4>Como posso avaliar este site?</h4>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Agradecemos seu feedback! Envie suas avaliações para o nosso e-mail com o assunto "Avaliação
-                            do Site Automatizei".</p>
+                        <p>Agradecemos o seu feedback! Envie as suas avaliações para o nosso e-mail com o assunto
+                            "Avaliação do
+                            Site Automatizei".</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <button class="faq-question">
                         <h4>Onde posso encontrar tutoriais de uso?</h4>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Estamos preparando uma seção de tutoriais em vídeo e artigos passo a passo. Fique ligado para
-                            as atualizações em breve!</p>
+                        <p>Estamos a preparar uma secção de tutoriais em vídeo e artigos passo a passo. Fique atento às
+                            actualizações em breve!</p>
                     </div>
                 </div>
-            </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>As ferramentas funcionam no telemóvel?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A maioria das IAs listadas possui versões mobile ou sites responsivos que funcionam
+                            perfeitamente no
+                            navegador do seu smartphone Android ou iOS.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Como posso apoiar o projecto Automatizei?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A melhor forma de apoiar é partilhando a plataforma com amigos e colegas. O nosso objectivo é
+                            ajudar o maior
+                            número de moçambicanos possível a dominar a tecnologia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Existem limites de uso nas IAs recomendadas?</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Algumas ferramentas (como o ChatGPT ou Runway) têm limites de créditos diários na versão
+                            gratuita. Se atingir
+                            o limite, poderá ter de esperar até ao dia seguinte ou considerar um plano premium da
+                            própria ferramenta.
+                        </p>
+                    </div>
+                </div>
+                <div id="no-results-faq" style="display: none; text-align: center; padding: 20px;">
+                    <p>Sua dúvida não foi encontrada.</p>
+                    <a href="mailto:agnaldoernesto99@gmail.com" class="cta-button" style="font-size: 0.9em;">Enviar dúvida pore-mail</a>
+                </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="sTool">
             <h3>Ainda Precisa de Ajuda?</h3>
-            <p>Se as respostas acima não resolveram sua questão, entre em contato comigo diretamente.</p>
+            <p>Se as respostas acima não resolveram a sua questão, entre em contacto comigo directamente.</p>
             <div class="contact-card ">
                 <div class="contact-info ">
                     <i class="fas fa-envelope icon"></i>
-                    <a href="mailto:agnaldoernesto99@gmail.com" style="text-decoration: none;">Falar comigo</a>
+                    <a href="mailto:agnaldoernesto99@gmail.com" style="text-decoration: none;">Falar comigo por
+                        E-mail</a>
+                </div>
+            </div>
+            <div class="contact-card" style="margin-top: 10px;">
+                <div class="contact-info ">
+                    <i class="fab fa-whatsapp icon" style="color: #25D366;"></i>
+                    <a href="https://wa.me/258849199234" target="_blank" style="text-decoration: none;">Falar no
+                        WhatsApp</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Todos os direitos reservados &copy; 2025 | Desenvolvido por <a href="https://esafe1.free.nf"
+        <p>Todos os direitos reservados &copy; 2026 | Desenvolvido por <a href="https://esafe1.free.nf"
                 target="_blank">Aguinaldo Ernesto</a></p>
     </footer>
 
-    <!-- Botão de voltar ao topo -->
     <button id="scrollTopBtn" class="scroll-top-button" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
