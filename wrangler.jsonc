@@ -6,7 +6,11 @@
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "exclude": [
+      ".vscode/*",
+      "wrangler.jsonc"
+    ]
   },
   "compatibility_flags": [
     "nodejs_compat"

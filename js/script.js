@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FAQ Accordion e Live Search ---
     const faqItems = document.querySelectorAll('.faq-item');
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.querySelector('.searchInput');
+    const searchInputMain = document.querySelector('.searchInputMain');
 
+    // Lógica do Accordion (Suporte)
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
@@ -46,10 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Função de pesquisa
+    // Pesquisa na página de Suporte
     if (searchInput) {
+        const noResultsFaq = document.getElementById('no-results-faq');
+
         searchInput.addEventListener('keyup', (e) => {
             const searchText = e.target.value.toLowerCase();
+            let foundAny = false;
 
             faqItems.forEach(item => {
                 const questionText = item.querySelector('h4').textContent.toLowerCase();
@@ -57,18 +62,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (questionText.includes(searchText) || answerText.includes(searchText)) {
                     item.style.display = 'block';
+                    foundAny = true;
                 } else {
                     item.style.display = 'none';
                 }
             });
+
+            // Exibe ou esconde a mensagem de erro
+            noResultsFaq.style.display = foundAny ? 'none' : 'block';
         });
     }
 
-    // --- Lógica para alternar o tema claro/escuro ---
+    // --- Lógica de Posicionamento ao Pesquisar (Suporte) ---
+    const searchButton = document.querySelector('.searchButton');
+    const faqSection = document.getElementById('faq-section');
+
+    // Função única para fazer o scroll
+    const scrollToFaqs = () => {
+        if (faqSection) {
+            faqSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
+    // Funciona ao clicar no botão (Rato ou Touch)
+    if (searchButton) {
+        searchButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita qualquer comportamento padrão
+            scrollToFaqs();
+        });
+    }
+
+    // Funciona ao pressionar Enter no teclado
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                scrollToFaqs();
+            }
+        });
+    }
+
+    // Pesquisa na página Início
+    if (searchInputMain) {
+        const noResultsMain = document.getElementById('no-results-main');
+
+        searchInputMain.addEventListener('keyup', (e) => {
+            const searchTextMain = e.target.value.toLowerCase();
+            const toolCards = document.querySelectorAll('.tool-item');
+            let foundAny = false;
+
+            toolCards.forEach(item => {
+                const cardText = item.textContent.toLowerCase();
+                if (cardText.includes(searchTextMain)) {
+                    item.style.display = 'block';
+                    foundAny = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Exibe ou esconde a mensagem de erro
+            noResultsMain.style.display = foundAny ? 'none' : 'block';
+        });
+    }
+
+    //  Lógica para alternar o tema claro/escuro 
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Função para atualizar o ícone
     function updateToggleIcon(theme) {
         if (!themeToggleBtn) return;
         const icon = themeToggleBtn.querySelector('i');
@@ -83,24 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Carrega o tema salvo no localStorage ou detecta a preferência do sistema
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
     } else if (savedTheme === 'light') {
         body.classList.remove('dark-theme');
     } else {
-        // Se não houver tema salvo, verifica a preferência do sistema
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (prefersDark) {
             body.classList.add('dark-theme');
         }
     }
 
-    // Define o atributo data-theme ao carregar a página
     body.setAttribute('data-theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
-
-    // Atualiza o ícone ao carregar a página
     updateToggleIcon(body.getAttribute('data-theme'));
 
     if (themeToggleBtn) {
@@ -116,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Botão de voltar ao topo (scroll-to-top) ---
     const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-    // Mostra o botão quando o usuário rola para baixo além de 300px
     function handleScroll() {
         if (!scrollTopBtn) return;
         const showAfter = 300;
@@ -127,10 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Ao clicar, faz scroll suave para o topo
     if (scrollTopBtn) {
         scrollTopBtn.addEventListener('click', (e) => {
-            // Respeita a preferência de redução de movimento
             const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             if (prefersReduced) {
                 window.scrollTo(0, 0);
@@ -140,9 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ouve o evento de rolagem
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // Executa uma verificação inicial
     handleScroll();
 });

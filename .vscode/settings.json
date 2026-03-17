@@ -1,3 +1,14 @@
 {
-    "vscode-edge-devtools.headless": false
+    "vscode-edge-devtools.headless": false,
+    "css.lint.propertyIgnoredDueToDisplay": "warning",
+    "css.lint.unknownAtRules": "warning",
+    "css.validate": false,
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "scss.lint.boxModel": "warning",
+    "less.lint.universalSelector": "warning",
+    "less.lint.idSelector": "warning",
+    "less.lint.duplicateProperties": "warning",
+    "less.lint.boxModel": "ignore",
+    "less.format.spaceAroundSelectorSeparator": true,
+    "css.trace.server": "messages"
 }
