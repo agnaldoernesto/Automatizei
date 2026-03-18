@@ -147,10 +147,11 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .faq-question:hover h4 {
-    color: var(--secondary-color);
+    color: var(--text-color-light);
 }
 
 .faq-answer {
