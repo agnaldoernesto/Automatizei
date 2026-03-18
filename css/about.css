@@ -1,0 +1,81 @@
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: var(--card-bg-color);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0000000d;
+    border: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+.about-image {
+    max-width: 100%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.about-text h2 {
+    font-size: 2.5em;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Telas de tablet (tamanho máximo de 878px) */
+@media (max-width: 878px) {
+
+    .about-section {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .about-image {
+        max-width: 50%;
+    }
+
+    .about-image img {
+        max-width: 50%;
+    }
+
+    .about-text h2 {
+        font-size: 2em;
+        font-family: 'Roboto', 'Helvetica', sans-serif;
+    }
+}
+
+/* Telas de celular (tamanho máximo de 550px) */
+@media (max-width: 550px) {
+
+    .about-text h2 {
+        font-size: 1.8em;
+        font-family: 'Roboto', 'Helvetica', sans-serif;
+    }
+
+    .about-image {
+        max-width: 60%;
+    }
+
+    .about-image img {
+        max-width: 45%;
+    }
+
+}
+
+/* Telas de celular menores (tamanho máximo de 380px) */
+
+@media (max-width: 380px) {
+
+    .about-text p {
+        text-align: justify;
+    }
+}

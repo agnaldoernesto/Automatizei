@@ -36,6 +36,11 @@
     outline: none;
     background-color: var(--bg-color);
     color: var(--text-color-light);
+    transition: box-shadow 0.3s;
+}
+
+.searchInput:focus {
+    box-shadow: 0 0.5px 3px var(--primary-color);
 }
 
 .searchInput::placeholder {
@@ -50,24 +55,29 @@
     color: var(--card-bg-color);
     border-radius: 0 50px 50px 0;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: trasnform 0.3s box-shadow 0.3s;
 }
 
-.searchButton:hover {
-    background-color: var(--secondary-color);
+.searchButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 8px 20px #0000001a;
 }
 
-.popular-topics, .faq-section, .contact-section {
+.popular-topics,
+.faq-section,
+.contact-section {
     max-width: 960px;
     margin: 40px auto;
     padding: 20px;
     background-color: var(--card-bg-color);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-color);
 }
 
-.popular-topics h3, .faq-section h3, .contact-section h3 {
+.popular-topics h3,
+.faq-section h3,
+.contact-section h3 {
     text-align: center;
     font-size: 2em;
     color: var(--secondary-color);
@@ -94,7 +104,7 @@
 
 .topic-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .topic-card i {
@@ -165,12 +175,30 @@
 }
 
 .contact-card {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
-    display: inline-block;
-    margin: 30px;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card i {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.contact-card:hover {
+    transform: translateY(3px);
+    box-shadow: 0 8px 20px #0000001a;
 }
 
 .contact-info {
@@ -191,9 +219,6 @@
     transition: color 0.3s;
 }
 
-.contact-info a:hover {
-    color: var(--secondary-color);
-}
 
 /* MEDIA QUERIES DA PÁGINA DE SUPORTE */
 @media (max-width: 878px) {
@@ -202,24 +227,32 @@
         margin-top: 80px;
         align-items: center;
     }
+
     .searchInput {
         border-radius: 50px;
         margin-bottom: 10px;
     }
+
     .searchButton {
         border-radius: 50px;
         width: 100%;
         max-width: 200px;
     }
+
     .support-hero {
         padding: 40px 15px;
     }
+
     .support-hero h2 {
         font-size: 2em;
     }
-    .popular-topics h3, .faq-section h3, .contact-section h3 {
+
+    .popular-topics h3,
+    .faq-section h3,
+    .contact-section h3 {
         font-size: 1.8em;
     }
+
     .topics-grid {
         grid-template-columns: 1fr;
     }
@@ -229,6 +262,7 @@
     .support-hero h2 {
         font-size: 1.8em;
     }
+
     .contact-info a {
         font-size: 1em;
     }
