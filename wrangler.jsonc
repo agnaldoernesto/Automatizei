@@ -7,14 +7,14 @@
   },
   "assets": {
     "directory": ".",
-    "directory": ".",
     "exclude": [
-      "../.vscode/*",
-      "../json/jwrangler.jsonc"
+     ".vscode/**",
+      ".git/**",
+      ".gitignore",
+      "wrangler.jsonc"
     ]
   },
   "compatibility_flags": [
     "nodejs_compat"
   ]
-}
 }
