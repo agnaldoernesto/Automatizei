@@ -41,4 +41,4 @@ Since this is a static project, you only need a modern web browser.
 
 ### Acess deployed site (preview)
 
-1. **just click here:** https://automatizei.agnaldoernesto99.workes.dev
+1. **just click here:** https://automatizei.agnaldoernesto99.workers.dev
