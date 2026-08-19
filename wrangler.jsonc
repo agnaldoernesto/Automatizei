@@ -6,7 +6,6 @@
     "enabled": true
   },
   "assets": {
-    "directory": "."
     "directory": ".",
     "exclude": [
       "../.vscode/*",
