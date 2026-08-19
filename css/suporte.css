@@ -1,0 +1,230 @@
+/* Estilos da Seção de Suporte (página atual) */
+.support-hero {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--card-bg-color);
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.support-hero h2 {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.support-hero p {
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color-light);
+}
+
+#searchButton {
+    padding: 15px 25px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--card-bg-color);
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.popular-topics, .faq-section, .contact-section {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.popular-topics h3, .faq-section h3, .contact-section h3 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.topic-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: var(--text-color-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.topic-card i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.topic-card span {
+    display: block;
+    font-weight: 500;
+}
+
+/* FAQ Section */
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.faq-question:hover h4 {
+    color: var(--secondary-color);
+}
+
+.faq-answer {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer p {
+    margin: 10px 0 0;
+    color: var(--text-color-light);
+}
+
+.faq-question.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Seção de Contato */
+.contact-section {
+    text-align: center;
+}
+
+.contact-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    display: inline-block;
+    margin: 30px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* MEDIA QUERIES DA PÁGINA DE SUPORTE */
+@media (max-width: 878px) {
+    .search-bar-container {
+        flex-direction: column;
+        margin-top: 80px;
+        align-items: center;
+    }
+    #searchInput {
+        border-radius: 50px;
+        margin-bottom: 10px;
+    }
+    #searchButton {
+        border-radius: 50px;
+        width: 100%;
+        max-width: 200px;
+    }
+    .support-hero {
+        padding: 40px 15px;
+    }
+    .support-hero h2 {
+        font-size: 2em;
+    }
+    .popular-topics h3, .faq-section h3, .contact-section h3 {
+        font-size: 1.8em;
+    }
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-hero h2 {
+        font-size: 1.8em;
+    }
+    .contact-info a {
+        font-size: 1em;
+    }
+}
