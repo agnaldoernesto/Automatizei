@@ -1,4 +1,4 @@
-# 🤖 Automatizei: The AI Workflow Hub
+# 👽 Automatizei: The AI Workflow Hub
 
 **Automatizei** is a curated, high-performance central hub designed to bridge the gap between complex AI technologies and everyday office productivity. This project serves as a discovery engine for AI tools specifically selected for content creation, administrative efficiency, and workflow automation.
 
