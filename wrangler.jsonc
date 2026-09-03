@@ -6,6 +6,7 @@
     "enabled": true
   },
   "assets": {
+    "directory": "."
     "directory": ".",
     "exclude": [
       "../.vscode/*",
@@ -15,4 +16,5 @@
   "compatibility_flags": [
     "nodejs_compat"
   ]
+}
 }
